@@ -11,7 +11,7 @@ set hlsearch
 set ignorecase
 set nowrap
 set laststatus=2
-
+set guifont=Consolas:h14:cANSI
 "statusline setup
 set statusline+=%{fugitive#statusline()}
 
