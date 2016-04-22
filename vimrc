@@ -26,6 +26,7 @@ ino <right> <Nop>
 ino <up> <Nop>
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :CtrlP<CR>
 inoremap jj <ESC>
 
 " set tabsize to 2 whitespaces
