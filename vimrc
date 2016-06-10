@@ -4,6 +4,12 @@ colorscheme corporation
 
 filetype plugin on
 
+set guioptions-=l 
+set guioptions-=L 
+set guioptions-=r 
+set guioptions-=R 
+set guioptions-=T
+
 set number
 set autoindent
 set expandtab
@@ -11,7 +17,7 @@ set hlsearch
 set ignorecase
 set nowrap
 set laststatus=2
-
+set guifont=Consolas:h14:cANSI
 "statusline setup
 set statusline+=%{fugitive#statusline()}
 
@@ -26,6 +32,7 @@ ino <right> <Nop>
 ino <up> <Nop>
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :CtrlP<CR>
 inoremap jj <ESC>
 
 " set tabsize to 2 whitespaces
