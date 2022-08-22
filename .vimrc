@@ -61,6 +61,7 @@ call plug#end()
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+nmap <C-m> :NERDTreeFind<CR>
 
 "-- COLOR & THEME CONFIG
 set termguicolors
