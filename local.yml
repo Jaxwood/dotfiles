@@ -1,0 +1,15 @@
+- hosts: localhost
+  pre_tasks:
+  - name: Update Apt
+    become: true
+    become_method: su
+    apt:
+      force_apt_get: true
+      update_cache: true
+      state: present
+    tags:
+      - install
+  tasks:
+    - include_tasks: tasks/git-setup.yml
+    - include_tasks: tasks/nvim-setup.yml
+
