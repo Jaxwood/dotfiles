@@ -1,0 +1,8 @@
+- name: Install Flux
+  become: true
+  shell: |
+    curl -s https://fluxcd.io/install.sh | bash
+  tags:
+    - install
+    - flux
+

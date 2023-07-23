@@ -2,7 +2,6 @@
   pre_tasks:
   - name: Update Apt
     become: true
-    become_method: su
     apt:
       force_apt_get: true
       update_cache: true
@@ -10,6 +9,12 @@
     tags:
       - install
   tasks:
+    - include_tasks: tasks/tools-setup.yml
     - include_tasks: tasks/git-setup.yml
     - include_tasks: tasks/nvim-setup.yml
+    - include_tasks: tasks/k9s-setup.yml
+    - include_tasks: tasks/lazygit-setup.yml
+    - include_tasks: tasks/kubectl-setup.yml
+    - include_tasks: tasks/flux-setup.yml
+    - include_tasks: tasks/helm-setup.yml
 

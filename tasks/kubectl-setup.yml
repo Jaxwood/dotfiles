@@ -1,0 +1,13 @@
+- name: Download kubectl
+  shell: |
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  tags:
+    - install
+    - kubectl
+- name: Install kubectl
+  become: true
+  shell: "chmod +x kubectl && mv kubectl /usr/local/bin/kubectl"
+  tags:
+    - install
+    - kubectl
+

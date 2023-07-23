@@ -22,4 +22,9 @@
   tags:
     - install
     - neovim
-
+- name: Clean
+  become: true
+  shell: "rm -rf nvim-linux64*"
+  tags:
+    - install
+    - neovim
