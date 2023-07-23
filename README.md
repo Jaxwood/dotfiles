@@ -1,13 +1,31 @@
-# dotfiles
+# Bootstraping
 
-My dotfiles for zsh and vim
+Using Ansible to bootstrap any new machine with my preferred settings.
 
 ## Installation
 
-After cloning the directory create symbolic links to the dotfiles in the home directory.
-
-```bash
-ln -s ~/directory-of-dotfiles/.vimrc ~/.vimrc
-ln -s ~/directory-of-dotfiles/.zshrc ~/.zshrc
-ln -s ~/directory-of-dotfiles/.p10k.zsh ~/.p10k.zsh
+```sh
+ansible-playbook local.yml
 ```
+
+with tags
+
+```sh
+ansible-playbook --tags <tag-name> local.yml
+```
+
+## Testing
+
+Provided dockerfile can be used for testing any changes
+
+```sh
+docker built -t new-machine .
+docker run -u 0 -it new-machine /bin/bash
+```
+
+once inside the container, run
+
+```sh
+ansible-playbook local.yml
+```
+
