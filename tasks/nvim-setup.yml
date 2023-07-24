@@ -28,3 +28,10 @@
   tags:
     - install
     - neovim
+- name: Configure
+  ansible.builtin.git:
+    repo: 'https://github.com/jaxwood/nvim'
+    dest: "{{ lookup('env', 'HOME') }}/.config/nvim"
+  tags:
+    - install
+    - neovim
