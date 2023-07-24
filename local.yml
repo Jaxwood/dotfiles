@@ -1,7 +1,7 @@
 - hosts: localhost
   vars:
-    source_key: "./.ssh/id_ed25519"
-    dest_key: "/home/jlo/.ssh/id_ed25519"
+    source_key: ".ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
   pre_tasks:
   - name: Update Apt
     become: true
@@ -15,10 +15,12 @@
     - include_tasks: tasks/tools-setup.yml
     - include_tasks: tasks/ssh-setup.yml
     - include_tasks: tasks/git-setup.yml
+    - include_tasks: tasks/oh-my-zsh-setup.yml
     - include_tasks: tasks/nvim-setup.yml
     - include_tasks: tasks/k9s-setup.yml
     - include_tasks: tasks/lazygit-setup.yml
     - include_tasks: tasks/kubectl-setup.yml
     - include_tasks: tasks/flux-setup.yml
     - include_tasks: tasks/helm-setup.yml
+    - include_tasks: tasks/node-setup.yml
 
