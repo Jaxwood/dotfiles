@@ -24,9 +24,8 @@
     - ssh
 - name: Set authorized key took from file
   authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
+    user: "jlo"
     key: "{{ lookup('file', item) }}"
+    state: present
   with_fileglob:
   - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
-
