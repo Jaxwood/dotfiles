@@ -12,4 +12,25 @@
     value: "Jacob Lorenzen"
   tags:
   - git
+- name: Signing format
+  git_config:
+    name: gpg.format
+    scope: global
+    value: "ssh"
+  tags:
+  - git
+- name: Signing Key
+  git_config:
+    name: user.signingkey
+    scope: global
+    value: "{{ dest_key }}"
+  tags:
+  - git
+- name: Auto sign commits
+  git_config:
+    name: commit.gpgsign
+    scope: global
+    value: "true"
+  tags:
+  - git
 
