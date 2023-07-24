@@ -1,0 +1,14 @@
+- name: Install oh-my-zsh
+  shell:
+    curl -LO https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && \
+    chmod +x install.sh && \
+    ./install.sh --unattended 
+  tags:
+    - install
+    - oh-my-zsh
+- name: Change shell
+  become: true
+  user:
+    name: jlo
+    shell: /bin/zsh
+
