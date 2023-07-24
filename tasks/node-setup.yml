@@ -6,25 +6,8 @@
     - install
     - node
 
-- name: npmjs prefix
-  shell: mkdir -p {{ lookup('env', 'HOME') }}/.local/.npm-global
-  tags:
-  - install
-  - node
-
-- name: add npmjs to path
-  shell: PATH={{ lookup('env', 'HOME') }}/.local/.npm-global/bin:$PATH
-  tags:
-  - install
-  - node
-
-- name: npmjs global settings
-  shell: npm config set prefix '{{ lookup('env', 'HOME') }}/.local/.npm-global'
-  tags:
-  - install
-  - node
-
 - name: Install N
+  become: true
   npm:
     name: n
     global: yes
@@ -34,9 +17,7 @@
 
 - name: Install correct version of Node
   become: true
-  shell: |
-    cd {{ lookup('env', 'HOME') }}/.local/.npm-global/bin
-    ./n 16
+  shell: n 16
   tags:
     - install
     - node
