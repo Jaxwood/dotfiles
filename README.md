@@ -5,13 +5,13 @@ Using Ansible to bootstrap any new machine with my preferred settings.
 ## Installation
 
 ```sh
-ansible-playbook local.yml
+ansible-playbook --ask-vault-password local.yml 
 ```
 
 with tags
 
 ```sh
-ansible-playbook --tags <tag-name> local.yml
+ansible-playbook --tags <tag-name> --ask-vault-password local.yml 
 ```
 
 ## Testing
@@ -26,6 +26,6 @@ docker run -u 0 -it new-machine /bin/bash
 once inside the container, run
 
 ```sh
-ansible-playbook local.yml
+ansible-playbook --ask-vault-password local.yml 
 ```
 

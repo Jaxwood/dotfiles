@@ -1,4 +1,7 @@
 - hosts: localhost
+  vars:
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
   pre_tasks:
   - name: Update Apt
     become: true
@@ -10,6 +13,7 @@
       - install
   tasks:
     - include_tasks: tasks/tools-setup.yml
+    - include_tasks: tasks/ssh-setup.yml
     - include_tasks: tasks/git-setup.yml
     - include_tasks: tasks/nvim-setup.yml
     - include_tasks: tasks/k9s-setup.yml
