@@ -6,9 +6,4 @@
   tags:
     - install
     - oh-my-zsh
-- name: Change shell
-  become: true
-  user:
-    name: jlo
-    shell: /bin/zsh
 

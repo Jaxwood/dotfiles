@@ -23,5 +23,9 @@
     - include_tasks: tasks/kubectl-setup.yml
     - include_tasks: tasks/flux-setup.yml
     - include_tasks: tasks/helm-setup.yml
-    - include_tasks: tasks/node-setup.yml
+    - include_tasks: tasks/rtx-setup.yml
+  post_tasks:
+    - name: Change shell to zsh
+      ansible.builtin.command: usermod --shell /usr/bin/zsh jlo
+      become: true
 
