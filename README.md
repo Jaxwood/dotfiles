@@ -19,7 +19,7 @@ ansible-playbook --tags <tag-name> --ask-vault-password local.yml
 Provided dockerfile can be used for testing any changes
 
 ```sh
-docker built -t new-machine .
+docker build -t new-machine .
 docker run -it new-machine /bin/bash
 ```
 
