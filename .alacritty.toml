@@ -1,0 +1,13 @@
+[font]
+size = 24
+
+[font.normal]
+family = "MesloLGS NF"
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 7
+y = 0
