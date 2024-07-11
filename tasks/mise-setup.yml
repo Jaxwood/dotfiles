@@ -1,0 +1,19 @@
+- name: Install mise
+  become: true
+  shell: |
+    MISE_VERSION=$(curl -s "https://api.github.com/repos/jdx/mise/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+    echo $MISE_VERSION
+    curl -Lo mise "https://github.com/jdx/mise/releases/latest/download/mise-v${MISE_VERSION}-linux-x64"
+    chmod +x mise
+    mv mise /usr/local/bin
+  tags:
+    - install
+    - mise
+- name: Activate mise
+  become: true
+  shell: |
+    mise activate zsh >> .zshrc
+  tags:
+    - install
+    - mise
+
