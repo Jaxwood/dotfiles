@@ -6,25 +6,25 @@
     - install
     - neovim
 - name: Download neovim
-  shell: "curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz"
+  shell: "curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
   tags:
     - install
     - neovim
 - name: Unpack neovim
   become: true
-  shell: "tar -xvf nvim-linux64.tar.gz"
+  shell: "tar -xvf nvim-linux-x86_64.tar.gz"
   tags:
     - install
     - neovim
 - name: Install neovim
   become: true
-  shell: "chmod +x nvim-linux64/bin/nvim && cp nvim-linux64/bin/nvim /usr/local/bin"
+  shell: "chmod +x nvim-linux-x86_64/bin/nvim && cp nvim-linux-x86_64/bin/nvim /usr/local/bin"
   tags:
     - install
     - neovim
 - name: Clean
   become: true
-  shell: "rm -rf nvim-linux64*"
+  shell: "rm -rf nvim-linux-x86_64*"
   tags:
     - install
     - neovim
