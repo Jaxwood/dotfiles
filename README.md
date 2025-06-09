@@ -26,6 +26,6 @@ docker run -it new-machine /bin/bash
 once inside the container, run
 
 ```sh
-ansible-playbook -K --ask-vault-pass local.yml 
+ansible-playbook -vv -K --ask-vault-pass local.yml 
 ```
 
