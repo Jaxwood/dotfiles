@@ -9,5 +9,5 @@
   shell: "chmod +x kubectl && mv kubectl /usr/local/bin/kubectl"
   tags:
     - install
-    - kubectl
+    - kubernetes
 

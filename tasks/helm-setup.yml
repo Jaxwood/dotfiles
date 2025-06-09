@@ -6,5 +6,5 @@
     rm get_helm.sh
   tags:
     - install
-    - helm
+    - kubernetes
 

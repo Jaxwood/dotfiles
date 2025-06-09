@@ -8,12 +8,12 @@
     mv mise /usr/local/bin
   tags:
     - install
-    - mise
+    - shell
 - name: Activate mise
   become: true
   shell: |
     mise activate zsh >> .zshrc
   tags:
     - install
-    - mise
+    - shell
 

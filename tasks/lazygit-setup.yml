@@ -6,11 +6,11 @@
     rm lazygit.tar.gz
   tags:
     - install
-    - lazygit
+    - git
 - name: Install lazygit
   become: true
   shell: "chmod +x lazygit && mv lazygit /usr/local/bin"
   tags:
     - install
-    - lazygit
+    - git
 

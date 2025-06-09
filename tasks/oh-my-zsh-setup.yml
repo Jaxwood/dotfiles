@@ -5,5 +5,5 @@
     ./install.sh --unattended 
   tags:
     - install
-    - oh-my-zsh
+    - shell
 

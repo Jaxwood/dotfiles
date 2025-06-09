@@ -5,7 +5,7 @@
     state: directory
   tags:
     - install
-    - ssh
+    - git
 - name: Install ssh key
   copy:
     src: "{{ source_key }}"
@@ -13,7 +13,7 @@
     mode: 0600
   tags:
     - install
-    - ssh
+    - git
 - name: Install ssh key public
   copy:
     src: "{{ source_key }}.pub"
@@ -21,7 +21,7 @@
     mode: 0644
   tags:
     - install
-    - ssh
+    - git
 - name: Set authorized key took from file
   authorized_key:
     user: "jlo"

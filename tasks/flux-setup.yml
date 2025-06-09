@@ -4,5 +4,5 @@
     curl -s https://fluxcd.io/install.sh | bash
   tags:
     - install
-    - flux
+    - kubernetes
 

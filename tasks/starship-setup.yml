@@ -1,7 +1,7 @@
 - name: Install starship
   become: true
-  apt:
-    name: [ "starship" ]
+  shell:
+    curl -sS https://starship.rs/install.sh | sh
   tags:
     - install
-    - starship
+    - shell

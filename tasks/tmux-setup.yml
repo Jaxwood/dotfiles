@@ -4,5 +4,5 @@
     dest: "{{ lookup('env', 'HOME') }}/.tmux/plugins/tpm"
   tags:
     - install
-    - tmux
+    - shell
 

@@ -2,23 +2,23 @@
   shell: "curl -LO https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz "
   tags:
     - install
-    - k9s
+    - kubernetes
 - name: Unpack k9s
   become: true
   shell: "tar -xvf k9s_Linux_amd64.tar.gz"
   tags:
     - install
-    - k9s
+    - kubernetes
 - name: Install k9s
   become: true
   shell: "chmod +x k9s && mv k9s /usr/local/bin"
   tags:
     - install
-    - k9s
+    - kubernetes
 - name: Clean
   become: true
   shell: "rm -rf k9s_Linux_amd64*"
   tags:
     - install
-    - k9s
+    - kubernetes
 
