@@ -1,0 +1,7 @@
+- name: Install starship
+  become: true
+  apt:
+    name: [ "starship" ]
+  tags:
+    - install
+    - starship

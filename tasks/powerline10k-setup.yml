@@ -1,8 +1,0 @@
-- name: Get Powerline10k
-  ansible.builtin.git:
-    repo: 'https://github.com/romkatv/powerlevel10k.git'
-    dest: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/custom/themes/powerlevel10k"
-  tags:
-    - install
-    - powerline10k
-

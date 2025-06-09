@@ -16,7 +16,7 @@
     - include_tasks: tasks/ssh-setup.yml
     - include_tasks: tasks/git-setup.yml
     - include_tasks: tasks/oh-my-zsh-setup.yml
-    - include_tasks: tasks/powerline10k-setup.yml
+    - include_tasks: tasks/starship-setup.yml
     - include_tasks: tasks/nvim-setup.yml
     - include_tasks: tasks/k9s-setup.yml
     - include_tasks: tasks/lazygit-setup.yml
